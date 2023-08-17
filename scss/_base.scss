@@ -1,0 +1,29 @@
+* {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+ul, ol {
+  list-style: none;
+}
+  
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+  
+button {
+  border: none;
+  background-color: inherit;
+}
+
+a, button {
+  cursor: pointer;
+}
+  
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
