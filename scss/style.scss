@@ -1,5 +1,7 @@
 body {
     font-family: "Poppins", sans-serif;
+    background: linear-gradient(93deg, rgba(161, 41, 186, 1) 0%, rgba(200, 51, 84, 1) 100%);
+    color: #FFF;
 }
 
 #blurring {
@@ -7,9 +9,10 @@ body {
         margin: 3rem 0;
         text-align: center;
         font-size: 3rem;
+        text-decoration: underline;
     }
 
-    div {
+    .content {
         display: flex;
         flex-direction: column;
         align-items: center;
