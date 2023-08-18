@@ -1,3 +1,139 @@
-h1 {
-    color: red;
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+#blurring {
+    h1 {
+        margin: 3rem 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        img {
+            width: 50rem;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.content {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+// ANTI ADD BLOCK
+.position_antiAddBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .antiAddBlock {
+        z-index: 1000;
+        opacity: 0;
+        color: #000;
+        text-align: center;
+        width: 25rem;
+        background-color: #FFF;
+        border-radius: 0.5rem;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        .circle_exclamation {
+            border-radius: 50%;
+            border: solid 0.4rem #AC2B9A;
+            width: 7rem;
+            height: 7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                filter: brightness(0) saturate(100%) invert(24%) sepia(64%) saturate(2116%) hue-rotate(282deg) brightness(94%) contrast(97%);
+                font-size: 3.3rem;
+            }
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        button {
+            color: #FFF;
+            font-size: 1rem;
+            font-weight: bold;
+            background: linear-gradient(93deg, rgba(161, 41, 186, 1) 0%, rgba(200, 51, 84, 1) 100%);
+            padding: 1rem;
+            border-radius: 1.5rem;
+        }
+    }
+
+    .show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+        transition: 1s ease-out;
+        animation: error 1.7s linear;
+    }
+}
+
+.blurring {
+    filter: blur(0.3rem);
+}
+
+@keyframes error {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(-15px);
+    }
+
+    10% {
+        transform: translateX(10px);
+    }
+
+    15% {
+        transform: translateX(-10px);
+    }
+
+    20% {
+        transform: translateX(6px);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
 }
